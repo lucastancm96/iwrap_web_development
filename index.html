@@ -1,0 +1,163 @@
+<html>
+
+<head>
+	<title>Home | iWrap</title>
+	<link href="homestyle.css" rel="stylesheet" type="text/css"/>
+	<script src="jquery.min.js"></script>
+	<script src="stepcarousel.js"></script>
+	
+	
+	<style type="text/css">
+
+	.stepcarousel{
+	position: relative;
+	margin-top:50px;
+	border: 5px solid white;
+	overflow: scroll; 
+	width: 90%; 
+	height: 600px; 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+	.stepcarousel .belt{
+	position: absolute; 
+	left: 0;
+	top: 0;
+	}
+
+	.stepcarousel .panel{
+	float: left; 
+	overflow: hidden; 
+	margin: 0px; 
+	width:1300px; 
+	}
+
+	span.paginatecircle{ 
+	background: white;
+	border: 2px solid #222;
+	border-radius: 0px;
+	width: 8px;
+	height: 8px;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 10px;
+	}
+
+	span.paginatecircle:hover{
+	background: #ccc;
+	}
+
+	span.paginatecircle.selected{
+	background: #222;
+	}
+	
+	</style>
+
+
+
+<script type="text/javascript">
+
+stepcarousel.setup({
+	galleryid: 'mygallery', 
+	beltclass: 'belt',
+	panelclass: 'panel', 
+	autostep: {enable:true, moveby:1, pause:1500},
+	panelbehavior: {speed:500, wraparound:true, wrapbehavior:'slide', persist:true},
+	defaultbuttons: {enable: true, moveby: 1, leftnav: ['gallery/backward.jpg', -40,240], rightnav: ['gallery/forward.jpg',-87, 240]},
+	statusvars: ['statusA', 'statusB', 'statusC'], 
+	contenttype: ['inline'] 
+})
+
+</script>	
+
+</head>
+
+<body>
+	<div id="nav">
+	<div id="nav_wrapper">
+	<ul>
+		<li style="margin:0 180 0 0"><a href="home.html"><img src="gallery/logo.jpg" width="100px" height="50px" style="vertical-align:middle"/></a></li>
+		<li><a href="shop.html">Shop</a></li>
+		<li><a href="custom.html" id="custom">Custom</a></li>
+		<li><a href="christmas.html">Christmas Special <span style="vertical-align:super; border:1px solid red; padding:2px" class="blink">New</span></a></li>
+		<li><input type="search" name="search" id="search" size="50px" placeholder="Search"/></li>
+		<li><label for="search"><img src="gallery/search.jpg" width="30px" height="30px" alt="search" style="vertical-align:middle; cursor:pointer"/></label></li>
+		<li><a href="login.html">Login</a></li>
+		<li><a href="cart.html"><img src='gallery/cart.jpg' width="30px" height="30px" onmouseover="this.src='gallery/cart2.jpg';" onmouseout="this.src='gallery/cart.jpg';" style="vertical-align:middle"/></a></li>
+		<li><a href="register.html">Register</a></li>
+	</ul>
+	</div>
+	</div>
+	<center>
+		<div id="mygallery" class="stepcarousel">
+		<div class="belt" style="left: 1px; top: 0">
+
+		<div class="panel">
+			<a href="custom.html"><img src="gallery/slide1.jpg" height="600px" /></a>
+		</div>
+
+		<div class="panel">
+			<img src="gallery/slide2.jpg" height="590px" />
+		</div>
+
+		<div class="panel">
+			<img src="gallery/slide3.jpg" height="600px" width=50%"/>
+			
+		</div>
+		<div class="panel">
+			<img src="gallery/slide4.jpg"/>
+		</div>
+		</div>
+		</div>
+
+		<p id="mygallery-paginate" >
+			<span class="paginatecircle" data-moveby="1"></span>
+		</p>
+	</center>
+		<div id="footer">
+	<table align="center">
+	<tr>
+	<td colspan="5" style="font-family:century gothic;font-weight:bold" height="42px">Find Us On:</td>
+	<td style="font-size:16pt;font-weight:bold; text-align:center;width:40%">Download Our Apps:</td>
+	<td style="font-size:12pt; font-weight:bold; width:10%; text-align:center">Company</td>
+	<td style="font-size:12pt; font-weight:bold; width:10%; text-align:center">Partners</td>
+	<td style="font2-size:12pt; font-weight:bold; width:10%; text-align:center">Support</td>
+	</tr>
+	<tr>
+	<td><a href="https://www.facebook.com/" target="_blank"><img src="gallery/facebook.jpg" width="40px" height="40px" alt="Facebook" id="icons"/></a></td>
+	<td><a href="https://www.instagram.com/" target="_blank"><img src="gallery/instagram.jpg" width="40px" height="40px" alt="instagram" id="icons"/></a></td>
+	<td><a href="https://twitter.com/iwrap" target="_blank"><img src="gallery/twitter.jpg" width="40px" height="40px" alt="twitter"/ id="icons"></a></td>
+	<td><a href="https://plus.google.com/" target="_blank"><img src="gallery/googleplus.jpg" width="40px" height="40px" alt="googleplus" id="icons"/></a></td>
+	<td><a href="https://www.pinterest.com/" target="_blank"><img src="gallery/pinterest.jpg" width="40px" height="40px" alt="pinterest" id="icons"/></a></td>
+	<td rowspan="2" align="center"><img src="gallery/googleplay.jpg" style="cursor:pointer" alt="googleplay"/></td>
+	<td style="text-align:center"><a href="aboutus.html">About Us</a></td>
+	<td style="text-align:center"><a href="https://www.apple.com/" target="_blank">Apple</a></td>
+	<td style="text-align:center"><a href="help.html">Help</a></td>
+	</tr>
+	<tr>
+	<td colspan="5" height="42px" valign="bottom" style="font-family:century gothic;font-weight:bold">We Accept:</td>
+	<td style="text-align:center"><a href="contactus.html">Contact Us</a></td>
+	<td style="text-align:center"><a href="http://www.casetify.com/" target="_blank">Casetify</a></td>
+	</tr>
+	<tr>
+	<td><img src="gallery/paypal.jpg" width="60px" height="40px" alt="paypal"></td>
+	<td><img src="gallery/visa.jpg" width="60px" height="40px" alt="visa"></td>
+	<td><img src="gallery/master.jpg" width="60px" height="40px" alt="master"></td>
+	<td><img src="gallery/bitcoin.jpg" width="60px" height="40px" alt="bitcoin"></td>
+	<td></td>
+	<td align="center"><img src="gallery/appstore.jpg" width="173px" height="60px" style="cursor:pointer" alt="appstore"/></td>
+	</tr>
+	</table>
+	<hr/>
+	<table align="center">
+	<tr>
+	<td>Copyright &copy; 2015 iWrap.Ltd</td>
+	<td width="10%" style="text-align:center">|</td>
+	<td><a href="t_c.html">Terms & Condition</a></td>
+	</tr>
+	</table>
+	</div>	
+</body>
+</html>
